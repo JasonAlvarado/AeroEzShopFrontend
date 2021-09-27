@@ -4,7 +4,7 @@ import ProductItem from './ProductItem';
 import "../styles/product-grid.scss"
 // import useGetProducts from '../api/useGetProducts';
 
-const ProductGrid = ({ category }) => {
+const ProductGrid = ({ category = "Almacén" }) => {
     const [page, setPage] = useState(0);
     const [products, setProducts] = useState([]);
     const MaxPageNumber = 5;
@@ -16,7 +16,6 @@ const ProductGrid = ({ category }) => {
     const loadMoreProducts = () => {
         // const url = `http://ezshop.us-east-1.elasticbeanstalk.com/api/product?page=${page + 1}`;
         const url = `https://challenge-api.aerolab.co/products?page=${page + 1}`;
-
 
         axios.get(url)
             .then(res => {

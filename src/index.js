@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import AeroCommerceApp from './AeroCommerceApp';
+import AeroCommerceApp from './App';
 import "./index.scss";
 
 ReactDOM.render(
