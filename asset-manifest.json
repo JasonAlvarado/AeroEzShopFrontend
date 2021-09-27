@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/AeroEzShopFrontend/static/css/main.72db0613.chunk.css",
+    "main.js": "/AeroEzShopFrontend/static/js/main.16a6760f.chunk.js",
+    "main.js.map": "/AeroEzShopFrontend/static/js/main.16a6760f.chunk.js.map",
+    "runtime-main.js": "/AeroEzShopFrontend/static/js/runtime-main.9953c7b5.js",
+    "runtime-main.js.map": "/AeroEzShopFrontend/static/js/runtime-main.9953c7b5.js.map",
+    "static/js/2.bfcbf6d3.chunk.js": "/AeroEzShopFrontend/static/js/2.bfcbf6d3.chunk.js",
+    "static/js/2.bfcbf6d3.chunk.js.map": "/AeroEzShopFrontend/static/js/2.bfcbf6d3.chunk.js.map",
+    "static/js/3.12ca9a70.chunk.js": "/AeroEzShopFrontend/static/js/3.12ca9a70.chunk.js",
+    "static/js/3.12ca9a70.chunk.js.map": "/AeroEzShopFrontend/static/js/3.12ca9a70.chunk.js.map",
+    "index.html": "/AeroEzShopFrontend/index.html",
+    "static/css/main.72db0613.chunk.css.map": "/AeroEzShopFrontend/static/css/main.72db0613.chunk.css.map",
+    "static/js/2.bfcbf6d3.chunk.js.LICENSE.txt": "/AeroEzShopFrontend/static/js/2.bfcbf6d3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9953c7b5.js",
+    "static/js/2.bfcbf6d3.chunk.js",
+    "static/css/main.72db0613.chunk.css",
+    "static/js/main.16a6760f.chunk.js"
+  ]
+}
