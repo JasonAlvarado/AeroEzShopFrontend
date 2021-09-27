@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AeroEzShopFrontend/static/css/main.019de4af.chunk.css",
-    "main.js": "/AeroEzShopFrontend/static/js/main.1ecdcdca.chunk.js",
-    "main.js.map": "/AeroEzShopFrontend/static/js/main.1ecdcdca.chunk.js.map",
+    "main.js": "/AeroEzShopFrontend/static/js/main.14098684.chunk.js",
+    "main.js.map": "/AeroEzShopFrontend/static/js/main.14098684.chunk.js.map",
     "runtime-main.js": "/AeroEzShopFrontend/static/js/runtime-main.922b26f7.js",
     "runtime-main.js.map": "/AeroEzShopFrontend/static/js/runtime-main.922b26f7.js.map",
     "static/js/2.05c5bbe7.chunk.js": "/AeroEzShopFrontend/static/js/2.05c5bbe7.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.922b26f7.js",
     "static/js/2.05c5bbe7.chunk.js",
     "static/css/main.019de4af.chunk.css",
-    "static/js/main.1ecdcdca.chunk.js"
+    "static/js/main.14098684.chunk.js"
   ]
 }
