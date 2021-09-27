@@ -1,0 +1,27 @@
+.category-name{
+    margin: 1rem 0rem;
+}
+
+
+
+.card-container{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 25rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.load-button{
+    background: var(--clr-primary);
+    color: var(--clr-secondary);
+    padding:0.8rem 0.6rem;
+    border-radius: 5px;
+}
+
+.load-button:hover{
+    cursor: pointer;
+    background: var(--clr-secondary);
+    color: var(--clr-primary);
+    padding:0.8rem 0.6rem;
+    border-radius: 5px;
+}

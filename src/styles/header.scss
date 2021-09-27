@@ -1,0 +1,58 @@
+header{
+    background: var(--clr-secondary);
+    // padding: 2rem 0rem;
+
+    nav{
+        width: 80%;
+        margin: auto;
+        padding: 1rem 0rem 3rem 0rem;
+        background: var(--clr-secondary);
+        
+        .logo-container{
+            background: transparent;
+            display: block;
+            float: left;
+            height: 100%;    
+            width: 10%;
+
+            img{
+                background: transparent;
+                display: inline-block;
+                height: 1rem;
+                margin-right: 1rem;
+            }
+            
+            h1{
+                background: transparent;
+                color: var(--clr-primary);
+                display: inline-block;
+                height: 1rem;
+
+                // strong{
+                //     background: transparent;
+                // }
+            }
+        }
+
+        .user-info{
+            background: transparent;
+            float: right;
+            width: 5%;
+            
+            p{
+                background: transparent;
+                color: var(--clr-primary);
+                display: inline-block;
+                height: 1rem;
+                margin-right: 3rem;
+                width: 10%;
+            }
+            
+            img{
+                background: transparent;
+                display: inline-block;
+                height: 1rem;
+            }
+        }
+    }
+}

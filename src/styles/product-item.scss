@@ -1,16 +1,6 @@
-.container{
-    width: 90%;
-    margin: auto;
-}
-
-.card-container{
-    display: grid;
-    gap: 1rem;
-    grid-auto-rows: 25rem;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-}
 
 .card{
+    box-shadow: 4px 4px 5px -5px grey;
     background: var(--clr-secondary);
     /* border: 1px solid var(--clr-primary); */
     border-radius: 5px;
@@ -43,9 +33,9 @@
 
 .card-button{
     background: var(--clr-secondary);
-    padding: 10px;
+    padding: 8px;
     border: 1px solid var(--clr-primary);
-    border-radius: 5px;
+    border-radius: 3px;
     color: var(--clr-primary);
     margin: 10px;
 }
