@@ -3,10 +3,10 @@ header{
     // padding: 2rem 0rem;
 
     nav{
-        width: 80%;
+        background: var(--clr-secondary);
         margin: auto;
         padding: 1rem 0rem 3rem 0rem;
-        background: var(--clr-secondary);
+        width: 80%;
         
         .logo-container{
             background: transparent;
@@ -27,10 +27,7 @@ header{
                 color: var(--clr-primary);
                 display: inline-block;
                 height: 1rem;
-
-                // strong{
-                //     background: transparent;
-                // }
+                // font-size: 1rem;
             }
         }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductItem from './ProductItem';
 import "../styles/product-grid.scss"
-import useGetProducts from '../api/useGetProducts';
+// import useGetProducts from '../api/useGetProducts';
 
 const ProductGrid = ({ category }) => {
     const [page, setPage] = useState(0);
@@ -13,40 +13,37 @@ const ProductGrid = ({ category }) => {
     }, []);
 
     const loadMoreProducts = () => {
-        // setPage(page + 1);
-        // const newProducts = useGetProducts(page);
-        // setProducts([...products, ...newProducts]);
-        axios.get(`https://challenge-api.aerolab.co/products?page${page}`)//https://challenge-api.aerolab.co/products
+        // const url = `http://ezshop.us-east-1.elasticbeanstalk.com/api/product?page=${page + 1}`;
+        // console.log(url)
+        const url = `https://challenge-api.aerolab.co/products?page=${page + 1}`;
+
+
+        axios.get(url)
             .then(res => {
-                console.log(res.data.products);
+                console.log(res.data);
+                // setProducts([...products, ...res.data]) para url de aws
                 setProducts([...products, ...res.data.products])
             })
             .catch(console.warn);
-    }
 
-    // const maxPageNumber = 5;
+        setPage(page + 1);
+    }
 
     return (
         <div className="container">
             <h2 className="category-name">{category}</h2>
 
             <div className="card-container">
-
                 {products && products.map((item, i) => (
                     <ProductItem
                         key={i}
                         {...item}
                     />
                 ))}
+            </div>
 
-                {/* {page === maxPageNumber ?
-                    (<p>No hay mas productos</p>) :
-                    <div style={{ textAlign: "center" }}>
-                        <button onClick={loadMoreProducts} className="load-button">Cargar más productos</button>
-                    </div>} */}
-                <div style={{ textAlign: "center" }}>
-                    <button onClick={loadMoreProducts} className="load-button">Cargar más productos</button>
-                </div>
+            <div className="button-container">
+                <button onClick={loadMoreProducts} className="load-button">Cargar más productos</button>
             </div>
         </div>
     )
