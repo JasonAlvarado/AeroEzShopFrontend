@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux'
+import { addToCart, loadCurrentItem } from '../redux/Shopping/shopping-actions';
 import "../styles/product-item.scss";
 
-const ProductItem = ({ name, photo, price, originalPrice }) => {
+const ProductItem = ({ id, name, photo, price, originalPrice }) => {
     return (
         <article className="card">
             <img className="card-img" src={photo} alt={name} />
@@ -11,12 +13,24 @@ const ProductItem = ({ name, photo, price, originalPrice }) => {
                 {(originalPrice != null && originalPrice > price) && <p className="originalPrice">{Number(originalPrice).toFixed(2)}</p>}
                 <p className="price">{Number(price).toFixed(2)}</p>
             </div>
-            <button className="card-button">Agregar al carrito</button>
+            <button
+                onClick={() => addToCart(id)}
+                className="card-button"
+            >
+                Agregar al carrito
+            </button>
         </article >
     )
 }
 
-export default ProductItem;
+const mapDispatchToProps = dispatch => {
+    return {
+        addToCart: (id) => dispatch(addToCart(id)),
+        loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ProductItem);
 
 ProductItem.propTypes = {
     name: PropTypes.string.isRequired,

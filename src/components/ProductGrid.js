@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductItem from './ProductItem';
 import "../styles/product-grid.scss"
-// import useGetProducts from '../api/useGetProducts';
+import { connect } from 'react-redux';
 
+// const ProductGrid = ({products}) => {
 const ProductGrid = ({ category = "Almacén" }) => {
     const [page, setPage] = useState(0);
     const [products, setProducts] = useState([]);
@@ -14,14 +15,12 @@ const ProductGrid = ({ category = "Almacén" }) => {
     }, []);
 
     const loadMoreProducts = () => {
-        // const url = `http://ezshop.us-east-1.elasticbeanstalk.com/api/product?page=${page + 1}`;
-        const url = `https://challenge-api.aerolab.co/products?page=${page + 1}`;
+        const url = `http://ezshop.us-east-1.elasticbeanstalk.com/api/product?page=${page + 1}`;
 
         axios.get(url)
             .then(res => {
                 console.log(res.data);
-                // setProducts([...products, ...res.data]) para url de aws
-                setProducts([...products, ...res.data.products])
+                setProducts([...products, ...res.data])
             })
             .catch(console.warn);
 
@@ -52,5 +51,11 @@ const ProductGrid = ({ category = "Almacén" }) => {
     )
 }
 
-export default ProductGrid
+// const mapStateToProps = state => {
+//     return {
+//         products: state.shop.products
+//     }
+// }
 
+// export default connect(mapStateToProps)(ProductGrid);
+export default ProductGrid;
