@@ -7,8 +7,10 @@ const ProductItem = ({ name, photo, price, originalPrice }) => {
         <article className="card">
             <img className="card-img" src={photo} alt={name} />
             <p className="card-title">{name}</p>
-            {originalPrice != null && originalPrice > price && <p className="originalPrice">{Number(originalPrice).toFixed(2)}</p>}
-            <p className="price">{Number(price).toFixed(2)}</p>
+            <div className="prices">
+                {(originalPrice != null && originalPrice > price) && <p className="originalPrice">{Number(originalPrice).toFixed(2)}</p>}
+                <p className="price">{Number(price).toFixed(2)}</p>
+            </div>
             <button className="card-button">Agregar al carrito</button>
         </article >
     )

@@ -1,3 +1,8 @@
+.button-container{
+    margin: 1rem auto;
+    text-align: center;
+}
+
 .category-name{
     margin: 1rem 0rem;
 }
@@ -10,24 +15,20 @@
 }
 
 .load-button{
-    background: var(--clr-secondary);
+    background: var(--clr-primary);
     border-radius: 5px;
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     padding:0.8rem 0.6rem;
     width: 18rem;
 }
 
 .load-button:hover{
-    background: var(--clr-primary);
+    background: var(--clr-secondary);
     border-radius: 5px;
     border: 1px solid var(--clr-primary);
-    color: var(--clr-secondary);
+    color: var(--clr-primary);
     cursor: pointer;
     padding:0.8rem 0.6rem;
     width: 18rem;
 }
 
-.button-container{
-    margin: 1rem auto;
-    text-align: center;
-}

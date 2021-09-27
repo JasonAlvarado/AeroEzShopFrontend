@@ -40,8 +40,7 @@
 }
 
 .originalPrice{
-    // text-decoration:  "line-through";
-    text-decoration: "line-through";
+    text-decoration: line-through;
     color: "black";
     display: inline-block;
     width: 50%;
@@ -53,4 +52,8 @@
     color: var(--clr-primary);
     display: inline-block;
     width: 50%;
+}
+
+.prices{
+    background: transparent;
 }
