@@ -1,0 +1,19 @@
+.buy-btn{
+    padding: 10px;
+    background: var(--clr-primary);
+    border:1px solid var(--clr-primary);
+    border-radius: 8px;
+    color: var(--clr-secondary);
+    cursor: pointer;
+    width: 90px;
+}
+
+.buy-btn:hover{
+    border:1px solid var(--clr-primary);
+    background: var(--clr-secondary);
+    border-radius: 8px;
+    color: 1px solid var(--clr-secondary);
+    cursor: pointer;
+    padding: 10px;
+    width: 90px;
+}

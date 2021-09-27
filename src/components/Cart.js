@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux";
 import CartItem from './CartItem';
-import ProductItem from './ProductItem';
+import "../styles/cart.scss"
 
 const Cart = ({ cart }) => {
     const [totalPrice, setTotalPrice] = useState(0);
@@ -34,7 +34,7 @@ const Cart = ({ cart }) => {
                     <span>TOTAL: ({totalItems} items)</span>
                     <span>$ {totalPrice}</span>
                 </div>
-                <button className="btn">
+                <button className="buy-btn">
                     Buy
                 </button>
             </div>

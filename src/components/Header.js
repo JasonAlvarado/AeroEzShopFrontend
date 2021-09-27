@@ -24,7 +24,7 @@ const Header = ({ cart }) => {
                     <h1 className="title">Ezshop</h1>
                 </Link>
                 <Link to="/cart" className="user-info">
-                    <h3>Cart</h3>
+                    <h3 className="cart-title">Cart</h3>
                     <img src={shoppingCart} alt={"shopping-cart"} />
                     <p>{cartCount}</p>
                 </Link>
