@@ -7,6 +7,7 @@ import "../styles/product-grid.scss"
 const ProductGrid = ({ category }) => {
     const [page, setPage] = useState(0);
     const [products, setProducts] = useState([]);
+    const MaxPageNumber = 5;
 
     useEffect(() => {
         loadMoreProducts();
@@ -14,7 +15,6 @@ const ProductGrid = ({ category }) => {
 
     const loadMoreProducts = () => {
         // const url = `http://ezshop.us-east-1.elasticbeanstalk.com/api/product?page=${page + 1}`;
-        // console.log(url)
         const url = `https://challenge-api.aerolab.co/products?page=${page + 1}`;
 
 
@@ -42,9 +42,13 @@ const ProductGrid = ({ category }) => {
                 ))}
             </div>
 
-            <div className="button-container">
-                <button onClick={loadMoreProducts} className="load-button">Cargar más productos</button>
-            </div>
+            {
+                page !== MaxPageNumber && (
+                    <div className="button-container">
+                        <button onClick={loadMoreProducts} className="load-button">Cargar más productos</button>
+                    </div>
+                )
+            }
         </div>
     )
 }
