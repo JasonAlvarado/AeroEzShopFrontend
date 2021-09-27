@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductItem from './ProductItem';
 import "../styles/product-grid.scss"
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 // const ProductGrid = ({products}) => {
 const ProductGrid = ({ category = "Almacén" }) => {
@@ -15,12 +15,11 @@ const ProductGrid = ({ category = "Almacén" }) => {
     }, []);
 
     const loadMoreProducts = () => {
-        const url = `http://ezshop.us-east-1.elasticbeanstalk.com/api/product?page=${page + 1}`;
+        const url = `https://challenge-api.aerolab.co/products?page=${page + 1}`;
 
         axios.get(url)
             .then(res => {
-                console.log(res.data);
-                setProducts([...products, ...res.data])
+                setProducts([...products, ...res.data.products])
             })
             .catch(console.warn);
 
