@@ -1,23 +1,57 @@
-import { ADD_TO_CART, CLEAN_CART, REMOVE_ITEM } from "../Types";
+import * as types from "../Types";
 
 const CartReducer = (state, action) => {
     switch (action.type) {
-        case ADD_TO_CART: {
+        case types.ADD_TO_CART: {
             return {
                 ...state,
-                cartItems: [...state.cartItems, action.payload]
+                cartItems: state.cartItems.some((item) => item.id === action.payload.id)
+                    ? (
+                        state.cartItems.map((item) => {
+                            if (item.id === action.payload.id) {
+                                item.quantity += action.payload.quantity;
+                            }
+                            return item;
+                        })
+                    )
+                    : (
+                        [...state.cartItems, action.payload]
+                    )
             }
         }
-        case REMOVE_ITEM: {
+        case types.INCREASE_QUANTITY: {
             return {
                 ...state,
-                cartItems: state.cartItems.filter(item => item.id !== action.payload)
+                cartItems: state.cartItems.map((item) => {
+                    if (item.id === action.payload) {
+                        item.quantity += 1;
+                        return item;
+                    }
+                    return item;
+                })
             }
         }
-        case CLEAN_CART: {
+        case types.DECREASE_QUANTITY: {
+            return {
+                ...state,
+                cartItems: state.cartItems.map((item) => {
+                    if (item.id === action.payload) {
+                        item.quantity -= 1;
+                    }
+                    return item;
+                })
+            }
+        }
+        case types.CLEAN_CART: {
             return {
                 ...state,
                 cartItems: []
+            }
+        }
+        case types.REMOVE_ITEM: {
+            return {
+                ...state,
+                cartItems: state.cartItems.filter(item => item.id !== action.payload)
             }
         }
         default:

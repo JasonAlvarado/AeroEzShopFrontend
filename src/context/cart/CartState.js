@@ -14,12 +14,12 @@ const CartState = ({ children }) => {
         dispatch({ type: types.ADD_TO_CART, payload: item });
     }
 
-    const increaseQuantity = (item) => {
-        dispatch({ type: types.INCREASE_QUANTITY, payload: item })
+    const increaseQuantity = (id) => {
+        dispatch({ type: types.INCREASE_QUANTITY, payload: id })
     }
 
-    const decreaseQuantity = (item) => {
-        dispatch({ type: types.DECREASE_QUANTITY, payload: item })
+    const decreaseQuantity = (id) => {
+        dispatch({ type: types.DECREASE_QUANTITY, payload: id })
     }
 
     const cleanCart = () => {

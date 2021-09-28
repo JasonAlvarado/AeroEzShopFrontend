@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import CartContext from '../context/cart/CartContext';
 import "../styles/product-item.scss";
 
 const ProductItem = ({ product }) => {
-    const { addToCart } = useContext(CartContext);
+    const [prodQuantity, setProdQuantity] = useState(0);
+    const { addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
     return (
         <article className="card">
@@ -14,12 +15,42 @@ const ProductItem = ({ product }) => {
                 {(product.originalPrice != null && product.originalPrice > product.price) && <p className="originalPrice">{Number(product.originalPrice).toFixed(2)}</p>}
                 <p className="price">{Number(product.price).toFixed(2)}</p>
             </div>
-            <button
-                onClick={() => { addToCart(product) }}
-                className="card-button"
-            >
-                Agregar al carrito
-            </button>
+            {prodQuantity === 0 ? (
+                <button
+                    onClick={() => {
+                        addToCart({ ...product, quantity: prodQuantity + 1 });
+                        setProdQuantity(prodQuantity + 1);
+                    }}
+                    className="card-button"
+                >
+                    Agregar al carrito
+                </button>
+            ) : (
+                <div className="quantity-info">
+                    <button
+                        onClick={() => {
+                            if (prodQuantity >= 1) {
+                                setProdQuantity(prodQuantity - 1)
+                                decreaseQuantity(product.id)
+                            }
+                        }}
+                        className="quantity-button"
+                    >
+                        -1
+                    </button>
+                    {prodQuantity}
+                    <button
+                        onClick={() => {
+                            setProdQuantity(prodQuantity + 1)
+                            increaseQuantity(product.id)
+                        }}
+                        className="quantity-button"
+                    >
+                        +1
+                    </button>
+                </div>
+            )
+            }
         </article >
     )
 }
