@@ -1,3 +1,16 @@
+Desarrollado con:
+
+  create-react-app
+
+  redux (en progreso)
+
+  css grid
+
+  scss
+    
+Url: https://jasonalvarado.github.io/AeroEzShopFrontend/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
