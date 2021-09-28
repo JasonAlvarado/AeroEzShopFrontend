@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import CartContext from '../context/cart/CartContext';
 import alertify from "alertifyjs";
-import "../styles/cart.scss";
 import CartItem from './CartItem';
 import { Link } from 'react-router-dom';
+import "../styles/cart.scss";
 
 const Cart = () => {
     const { cartItems, cleanCart } = useContext(CartContext);
