@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/AeroEzShopFrontend/static/css/main.019de4af.chunk.css",
-    "main.js": "/AeroEzShopFrontend/static/js/main.14098684.chunk.js",
-    "main.js.map": "/AeroEzShopFrontend/static/js/main.14098684.chunk.js.map",
-    "runtime-main.js": "/AeroEzShopFrontend/static/js/runtime-main.922b26f7.js",
-    "runtime-main.js.map": "/AeroEzShopFrontend/static/js/runtime-main.922b26f7.js.map",
-    "static/js/2.05c5bbe7.chunk.js": "/AeroEzShopFrontend/static/js/2.05c5bbe7.chunk.js",
-    "static/js/2.05c5bbe7.chunk.js.map": "/AeroEzShopFrontend/static/js/2.05c5bbe7.chunk.js.map",
-    "static/js/3.3054ae7b.chunk.js": "/AeroEzShopFrontend/static/js/3.3054ae7b.chunk.js",
-    "static/js/3.3054ae7b.chunk.js.map": "/AeroEzShopFrontend/static/js/3.3054ae7b.chunk.js.map",
+    "main.css": "/AeroEzShopFrontend/static/css/main.543de7b8.chunk.css",
+    "main.js": "/AeroEzShopFrontend/static/js/main.c7a13df2.chunk.js",
+    "main.js.map": "/AeroEzShopFrontend/static/js/main.c7a13df2.chunk.js.map",
+    "runtime-main.js": "/AeroEzShopFrontend/static/js/runtime-main.874ad1ff.js",
+    "runtime-main.js.map": "/AeroEzShopFrontend/static/js/runtime-main.874ad1ff.js.map",
+    "static/css/2.75c9b377.chunk.css": "/AeroEzShopFrontend/static/css/2.75c9b377.chunk.css",
+    "static/js/2.11814be4.chunk.js": "/AeroEzShopFrontend/static/js/2.11814be4.chunk.js",
+    "static/js/2.11814be4.chunk.js.map": "/AeroEzShopFrontend/static/js/2.11814be4.chunk.js.map",
+    "static/js/3.f577449b.chunk.js": "/AeroEzShopFrontend/static/js/3.f577449b.chunk.js",
+    "static/js/3.f577449b.chunk.js.map": "/AeroEzShopFrontend/static/js/3.f577449b.chunk.js.map",
     "index.html": "/AeroEzShopFrontend/index.html",
-    "static/css/main.019de4af.chunk.css.map": "/AeroEzShopFrontend/static/css/main.019de4af.chunk.css.map",
-    "static/js/2.05c5bbe7.chunk.js.LICENSE.txt": "/AeroEzShopFrontend/static/js/2.05c5bbe7.chunk.js.LICENSE.txt"
+    "static/css/2.75c9b377.chunk.css.map": "/AeroEzShopFrontend/static/css/2.75c9b377.chunk.css.map",
+    "static/css/main.543de7b8.chunk.css.map": "/AeroEzShopFrontend/static/css/main.543de7b8.chunk.css.map",
+    "static/js/2.11814be4.chunk.js.LICENSE.txt": "/AeroEzShopFrontend/static/js/2.11814be4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.922b26f7.js",
-    "static/js/2.05c5bbe7.chunk.js",
-    "static/css/main.019de4af.chunk.css",
-    "static/js/main.14098684.chunk.js"
+    "static/js/runtime-main.874ad1ff.js",
+    "static/css/2.75c9b377.chunk.css",
+    "static/js/2.11814be4.chunk.js",
+    "static/css/main.543de7b8.chunk.css",
+    "static/js/main.c7a13df2.chunk.js"
   ]
 }
