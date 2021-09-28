@@ -18,34 +18,28 @@ const Cart = () => {
             <div>
                 {cartItems !== undefined && cartItems.length > 0 ?
                     (
-                        <>
-                            <div className="cart-grid">
-                                <div>
-                                    {cartItems.map((product) => (
-                                        <CartItem
-                                            key={product.id}
-                                            product={product}
-                                        />
-                                    ))}
-                                </div>
-                                <div className="cart-details">
-                                    <p>Products:{cartItems.length}</p>
-                                    <strong>Total:
-                                        {Number(cartItems.reduce((amount, item) =>
-                                            item.price + amount, 0
-                                        )).toFixed(2)
-                                        }
-                                    </strong>
-                                    <br />
-                                    <div className="buy-btn-container">
-                                        <button onClick={buy} className="buy-btn">Comprar</button>
-                                    </div>
+                        <div>
+                            <h3 className="cart-title">Carrito de compra</h3>
+                            <ul>
+                                {cartItems.map((product) => (
+                                    <CartItem
+                                        key={product.id}
+                                        product={product}
+                                    />
+                                ))}
+                            </ul>
+                            <div className="cart-details">
+                                <p>Cantidad de Productos: {cartItems.length}</p>
+                                <strong>Precio total: ${Number(cartItems.reduce((amount, item) =>
+                                    item.price + amount, 0
+                                )).toFixed(2)}
+                                </strong>
+                                <br />
+                                <div className="buy-btn-container">
+                                    <button onClick={buy} className="buy-btn">Comprar</button>
                                 </div>
                             </div>
-                            <ul>
-
-                            </ul>
-                        </>
+                        </div>
                     ) : (
                         <div>
                             <h4>El carrito está vacio</h4>
