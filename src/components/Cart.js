@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from "react-redux";
 import CartItem from './CartItem';
+import alertify from 'alertifyjs';
 import "../styles/cart.scss"
 
 const Cart = ({ cart }) => {
@@ -21,6 +22,10 @@ const Cart = ({ cart }) => {
         setTotalPrice(price);
     }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
 
+    const buyProducts = () => {
+        alertify.success('Compra finalizada');
+    }
+
     return (
         <div className="container">
             <div>
@@ -29,13 +34,13 @@ const Cart = ({ cart }) => {
                 ))}
             </div>
             <div>
-                <h4>Cart Summary</h4>
+                <h4>Productos del carrito</h4>
                 <div>
-                    <span>TOTAL: ({totalItems} items)</span>
+                    <span>TOTAL: ({totalItems} productos)</span>
                     <span>$ {totalPrice}</span>
                 </div>
-                <button className="buy-btn">
-                    Buy
+                <button onClick={buyProducts} className="buy-btn">
+                    Comprar
                 </button>
             </div>
         </div>

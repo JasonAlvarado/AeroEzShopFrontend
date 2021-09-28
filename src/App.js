@@ -7,6 +7,7 @@ import {
 import Cart from "./components/Cart";
 import Header from "./components/Header";
 import ProductGrid from "./components/ProductGrid";
+import "alertifyjs/build/css/alertify.css";
 
 const App = () => {
     return (

@@ -8,6 +8,7 @@ import "../styles/product-grid.scss"
 const ProductGrid = ({ category = "Almacén" }) => {
     const [page, setPage] = useState(0);
     const [products, setProducts] = useState([]);
+    const [visibleLoadButton, setVisibleLoadButton] = useState(true);
     const MaxPageNumber = 5;
 
     useEffect(() => {
@@ -40,7 +41,7 @@ const ProductGrid = ({ category = "Almacén" }) => {
             </div>
 
             {
-                page !== MaxPageNumber && (
+                visibleLoadButton && (
                     <div className="button-container">
                         <button onClick={loadMoreProducts} className="load-button">Cargar más productos</button>
                     </div>
