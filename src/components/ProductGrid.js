@@ -28,9 +28,9 @@ const ProductGrid = ({ category = "Almacén" }) => {
             <h2 className="category-name">{category}</h2>
 
             <div className="card-container">
-                {products && products.map((item, i) => (
+                {products && products.map((item) => (
                     <ProductItem
-                        key={i}
+                        key={item.id}
                         product={item}
                     />
                 ))}

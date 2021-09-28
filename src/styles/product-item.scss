@@ -41,6 +41,19 @@
     color: var(--clr-secondary);
 }
 
+.quantity-info{
+    background: transparent;
+}
+
+.quantity-button{
+    background: var(--clr-secondary);
+    padding: 8px;
+    border: 1px solid var(--clr-primary);
+    border-radius: 3px;
+    color: var(--clr-primary);
+    margin: 10px;
+}
+
 .originalPrice{
     text-decoration: line-through;
     color: "black";

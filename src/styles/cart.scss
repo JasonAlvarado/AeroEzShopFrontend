@@ -21,10 +21,15 @@
 }
 
 .cart-item{
-    margin: "0.2rem";
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));//18% 1fr;
+    margin: 0.6rem;
     list-style-type: none;
-    display: "grid";
-    grid-template-columns: 20% 1fr;
+
+    img{
+        height: 100%;
+    }
 }
 
 .cart-title{
@@ -56,10 +61,19 @@
         display: inline-block;
     }
 }
+
 .del-button{
     cursor: pointer;
     padding: 10px 20px;
     border-radius: 5px;
     background: white;
     color: red;
+}
+
+.quantity-button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: white;
+    color: var(--clr-primary);
 }

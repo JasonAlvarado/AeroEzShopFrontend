@@ -31,7 +31,7 @@ const Cart = () => {
                             <div className="cart-details">
                                 <p>Cantidad de Productos: {cartItems.length}</p>
                                 <strong>Precio total: ${Number(cartItems.reduce((amount, item) =>
-                                    item.price + amount, 0
+                                    (item.price * item.quantity) + amount, 0
                                 )).toFixed(2)}
                                 </strong>
                                 <br />
