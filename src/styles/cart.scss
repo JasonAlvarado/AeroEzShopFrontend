@@ -5,7 +5,8 @@
     border-radius: 8px;
     color: var(--clr-secondary);
     cursor: pointer;
-    width: 90px;
+    margin: 1rem auto;
+    width: 70%;
 }
 
 .buy-btn:hover{
@@ -15,5 +16,25 @@
     color: 1px solid var(--clr-secondary);
     cursor: pointer;
     padding: 10px;
-    width: 90px;
+    width: 70%;
+    margin: 1rem auto;
+}
+
+.cart-item{
+    margin: "0.2rem";
+    list-style-type: none;
+    display: "grid";
+    grid-template-columns: 20% 1fr;
+}
+
+.cart-grid{
+    display: grid;
+    // grid-template-columns: 70% 1fr;
+    gap:1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(50%);
+}
+
+.buy-btn-container{
+    text-align: center;
 }

@@ -1,56 +1,62 @@
-import React, { useState, useEffect } from 'react'
-import { connect } from "react-redux";
+import React, { useContext } from 'react'
+import CartContext from '../context/cart/CartContext';
+import alertify from "alertifyjs";
+import "../styles/cart.scss";
 import CartItem from './CartItem';
-import alertify from 'alertifyjs';
-import "../styles/cart.scss"
+import { Link } from 'react-router-dom';
 
-const Cart = ({ cart }) => {
-    const [totalPrice, setTotalPrice] = useState(0);
-    const [totalItems, setTotalItems] = useState(0);
+const Cart = () => {
+    const { cartItems, cleanCart } = useContext(CartContext);
 
-
-    useEffect(() => {
-        let items = 0;
-        let price = 0;
-
-        cart.forEach((item) => {
-            items += item.quantity;
-            price += item.quantity * item.price;
-        });
-
-        setTotalItems(items);
-        setTotalPrice(price);
-    }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
-
-    const buyProducts = () => {
-        alertify.success('Compra finalizada');
+    const buy = () => {
+        alertify.success('Compra exitosa');
+        cleanCart();
     }
 
     return (
         <div className="container">
             <div>
-                {cart.map((item) => (
-                    <CartItem key={item.id} item={item} />
-                ))}
+                {cartItems !== undefined && cartItems.length > 0 ?
+                    (
+                        <>
+                            <div className="cart-grid">
+                                <div>
+                                    {cartItems.map((product) => (
+                                        <CartItem
+                                            key={product.id}
+                                            product={product}
+                                        />
+                                    ))}
+                                </div>
+                                <div className="cart-details">
+                                    <p>Products:{cartItems.length}</p>
+                                    <strong>Total:
+                                        {Number(cartItems.reduce((amount, item) =>
+                                            item.price + amount, 0
+                                        )).toFixed(2)
+                                        }
+                                    </strong>
+                                    <br />
+                                    <div className="buy-btn-container">
+                                        <button onClick={buy} className="buy-btn">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+
+                            </ul>
+                        </>
+                    ) : (
+                        <div>
+                            <h4>El carrito está vacio</h4>
+                            <Link to="/" style={{ textDecoration: "none", margin: "20px 0" }}>
+                                Visite la tienda para agregar productos
+                            </Link>
+                        </div>
+                    )}
             </div>
-            <div>
-                <h4>Productos del carrito</h4>
-                <div>
-                    <span>TOTAL: ({totalItems} productos)</span>
-                    <span>$ {totalPrice}</span>
-                </div>
-                <button onClick={buyProducts} className="buy-btn">
-                    Comprar
-                </button>
-            </div>
-        </div>
+        </div >
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        cart: state.shop.cart,
-    };
-};
-
-export default connect(mapStateToProps)(Cart);
+export default Cart

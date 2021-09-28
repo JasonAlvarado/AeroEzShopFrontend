@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import AeroCommerceApp from './App';
+import App from './App';
+import CartState from "./context/cart/CartState";
 import "./index.scss";
-
-import { Provider } from 'react-redux';
-import store from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <AeroCommerceApp />
-    </Provider>
+    <CartState>
+      <App />
+    </CartState>
   </React.StrictMode>,
   document.getElementById('root')
 );

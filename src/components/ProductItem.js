@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux'
-import { addToCart, loadCurrentItem } from '../redux/Shopping/shopping-actions';
+import CartContext from '../context/cart/CartContext';
 import "../styles/product-item.scss";
 
-const ProductItem = ({ id, name, photo, price, originalPrice }) => {
+const ProductItem = ({ product }) => {
+    const { addToCart } = useContext(CartContext);
+
     return (
         <article className="card">
-            <img className="card-img" src={photo} alt={name} />
-            <p className="card-title">{name}</p>
+            <img className="card-img" src={product.photo} alt={product.name} />
+            <p className="card-title">{product.name}</p>
             <div className="prices">
-                {(originalPrice != null && originalPrice > price) && <p className="originalPrice">{Number(originalPrice).toFixed(2)}</p>}
-                <p className="price">{Number(price).toFixed(2)}</p>
+                {(product.originalPrice != null && product.originalPrice > product.price) && <p className="originalPrice">{Number(product.originalPrice).toFixed(2)}</p>}
+                <p className="price">{Number(product.price).toFixed(2)}</p>
             </div>
             <button
-                onClick={() => addToCart(id)}
+                onClick={() => { addToCart(product) }}
                 className="card-button"
             >
                 Agregar al carrito
@@ -23,17 +24,8 @@ const ProductItem = ({ id, name, photo, price, originalPrice }) => {
     )
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        addToCart: (id) => dispatch(addToCart(id)),
-        loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
-    }
-}
-
-export default connect(null, mapDispatchToProps)(ProductItem);
+export default ProductItem;
 
 ProductItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired
+    product: PropTypes.object.isRequired
 }

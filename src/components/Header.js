@@ -1,20 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import logo from "../assets/combined-shape.png";
+import CartContext from '../context/cart/CartContext';
 import shoppingCart from "../assets/shopping-cart.png";
-import { connect } from "react-redux";
+import logo from "../assets/combined-shape.png";
 import "../styles/header.scss";
 
-const Header = ({ cart }) => {
-    const [cartCount, setCartCount] = useState(0);
-
-    useEffect(() => {
-        let count = 0;
-
-        cart.forEach((item) => {
-            count += item.qty;
-        });
-    }, [cart, cartCount])
+const Header = () => {
+    const { cartItems } = useContext(CartContext);
 
     return (
         <header>
@@ -23,20 +15,15 @@ const Header = ({ cart }) => {
                     <img src={logo} alt={"logo"} className="logo-image" />
                     <h1 className="title">Ezshop</h1>
                 </Link>
-                <Link to="/cart" className="user-info">
-                    <h3 className="cart-title">Cart</h3>
+                <Link to="/cart" className="cart-info">
                     <img src={shoppingCart} alt={"shopping-cart"} />
-                    <p>{cartCount}</p>
+                    {cartItems.length > 0 && (
+                        <p className="prods-count-number">{cartItems.length}</p>
+                    )}
                 </Link>
             </nav>
         </header>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        cart: state.shop.cart,
-    };
-};
-
-export default connect(mapStateToProps)(Header);
+export default Header;

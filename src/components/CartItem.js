@@ -1,61 +1,15 @@
-import React, { useState } from 'react'
-import { connect } from "react-redux";
-import {
-    adjustQuantity,
-    removeFromCart,
-} from "../redux/Shopping/shopping-actions";
+import React from 'react'
 
-const CartItem = ({ item, adjustQty, removeFromCart }) => {
-    const [input, setInput] = useState(item.quantity);
-
-    const onChangeHandler = (e) => {
-        setInput(e.target.value);
-        adjustQty(item.id, e.target.value);
-    };
-
+const CartItem = ({ product }) => {
     return (
-        <div>
-            <img
-                src={item.image}
-                alt={item.title}
-            />
-            <div>
-                <p>{item.title}</p>
-                <p>{item.description}</p>
-                <p>$ {item.price}</p>
-            </div>
-            <div>
-                <div>
-                    <label htmlFor="quantity">Quantity</label>
-                    <input
-                        min="1"
-                        type="number"
-                        id="quantity"
-                        name="quantity"
-                        value={input}
-                        onChange={onChangeHandler}
-                    />
-                </div>
-                <button
-                    onClick={() => removeFromCart(item.id)}
-                >
-                    <img
-                        src="https://image.flaticon.com/icons/svg/709/709519.svg"
-                        alt=""
-                    />
-                </button>
-            </div>
-        </div>
+        <li key={product.id} className="cart-item">
+            <img src={product.photo} alt="cart-item" />
+            <p>{product.name}</p>
+            <p>Cantidad: 1</p>
+            <p>{Number(product.price).toFixed(2)}</p>
+            <p>total: {Number(1 * product.price).toFixed(2)}</p>
+        </li>
     )
 }
 
-
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        adjustQty: (id, value) => dispatch(adjustQuantity(id, value)),
-        removeFromCart: (id) => dispatch(removeFromCart(id)),
-    };
-};
-
-export default connect(null, mapDispatchToProps)(CartItem);
+export default CartItem
