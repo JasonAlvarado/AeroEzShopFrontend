@@ -1,8 +1,12 @@
+Actualizado: Martes 28/9  11:30 am
+
 Desarrollado con:
 
   create-react-app
 
-  redux (en progreso)
+  react hooks
+  
+  context api
 
   css grid
 
