@@ -10,14 +10,14 @@ const ProductItem = ({ product }) => {
     return (
         <article className="card">
             <img src={product.photo} alt={product.name} />
-            <p className="card-title">{product.name}</p>
-            <p className="price"></p>
-            {/* <div className="prices">
+            <h5 className="card-title">{product.name}</h5>
+            <div className="prices">
                 {(product.originalPrice != null && product.originalPrice > product.price) && (
-                    <p className="originalPrice">{Number(product.originalPrice).toFixed(2)}</p>
+                    <p className="original-price">{Number(product.originalPrice).toFixed(2)}</p>
                 )}
-                <p className="currentPrice">{Number(product.price).toFixed(2)}</p>
-            </div> */}
+                <p className="current-price">{Number(product.price).toFixed(2)}</p>
+            </div>
+            <br />
             {
                 prodQuantity === 0 ? (
                     <button

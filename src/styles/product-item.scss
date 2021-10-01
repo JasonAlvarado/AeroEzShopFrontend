@@ -35,6 +35,26 @@
         background: var(--clr-primary);
         color: var(--clr-secondary);
     }
+    
+    .prices{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: transparent;
+        margin: 0.4rem 0;
+
+        .original-price{
+            background: transparent;
+            padding: 0 2rem;
+            text-decoration: line-through;
+        }
+
+        .current-price{
+            background: transparent;
+            padding: 0 2rem;
+        }
+    }
 }
 
 .card:hover{
@@ -45,11 +65,13 @@
     padding: 0.2rem 2rem;
     background: transparent;
     display: grid;
+    height: 2rem;
     grid-template-columns:  1fr 60% 1fr;
 
     button{
         border: 0;
         background: var(--clr-primary);
+        border-radius: 4px;
         color: var(--clr-secondary);
         cursor: pointer;
         font-weight: bold;
@@ -61,23 +83,4 @@
         align-items: center;
         justify-content: center;
     }
-}
-
-.originalPrice{
-    text-decoration: line-through;
-    color: "black";
-    display: inline-block;
-    width: 50%;
-    background: transparent;
-}
-
-.price{
-    background: transparent;
-    color: var(--clr-primary);
-    display: inline-block;
-    width: 50%;
-}
-
-.prices{
-    background: transparent;
 }
