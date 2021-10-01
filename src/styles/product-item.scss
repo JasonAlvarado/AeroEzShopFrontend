@@ -2,56 +2,65 @@
     box-shadow: 4px 4px 5px -5px grey;
     background: var(--clr-secondary);
     border-radius: 5px;
-    // cursor: pointer;
     padding: 0.3rem;
     text-align: center;
+
+    img{
+        object-fit: cover;
+    }
+
+    .card-title{
+        background: var(--clr-secondary);
+        height: 1rem;
+        overflow: hidden;
+        background: transparent;
+    }
+
+    .card-price{
+        color: var(--clr-primary);
+        background: var(--clr-secondary);
+    }
+
+    .add-button{
+        background: var(--clr-secondary);
+        border: 1px solid var(--clr-primary);
+        color: var(--clr-primary);
+        border-radius: 3px;
+        margin: 10px;
+        padding: 8px;
+    }
+
+    .add-button:hover{
+        cursor: pointer;
+        background: var(--clr-primary);
+        color: var(--clr-secondary);
+    }
 }
 
 .card:hover{
     box-shadow: 5px 2px 15px 5px grey;
 }
 
-.card-title{
-    background: var(--clr-secondary);
-    height: 2.2rem;
-    overflow: hidden;
-}
-
-.card-price{
-    color: var(--clr-primary);
-    background: var(--clr-secondary);
-}
-
-.card-img{
-    object-fit: cover;
-}
-
-.card-button{
-    background: var(--clr-secondary);
-    padding: 8px;
-    border: 1px solid var(--clr-primary);
-    border-radius: 3px;
-    color: var(--clr-primary);
-    margin: 10px;
-}
-
-.card-button:hover{
-    cursor: pointer;
-    background: var(--clr-primary);
-    color: var(--clr-secondary);
-}
-
 .quantity-info{
+    padding: 0.2rem 2rem;
     background: transparent;
-}
+    display: grid;
+    grid-template-columns:  1fr 60% 1fr;
 
-.quantity-button{
-    background: var(--clr-secondary);
-    padding: 8px;
-    border: 1px solid var(--clr-primary);
-    border-radius: 3px;
-    color: var(--clr-primary);
-    margin: 10px;
+    button{
+        border: 0;
+        background: var(--clr-primary);
+        color: var(--clr-secondary);
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    span{
+        background: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .originalPrice{

@@ -1,6 +1,5 @@
 header{
     background: var(--clr-secondary);
-    // padding: 2rem 0rem;
 
     nav{
         background: var(--clr-secondary);
@@ -27,7 +26,6 @@ header{
                 color: var(--clr-primary);
                 display: inline-block;
                 height: 1rem;
-                // font-size: 1rem;
             }
         }
 
@@ -52,8 +50,4 @@ header{
             }
         }
     }
-}
-
-.cart-title{
-    background: transparent;
 }

@@ -1,0 +1,53 @@
+.cart-item{
+    background: var(--clr-secondary);
+    border-radius: 10px;
+    border: 1px solid var(--clr-primary);
+    font-size: 1rem;
+    list-style: none;
+    padding: 0.5rem;
+    text-align: left;
+
+    img{
+        height: 10rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .info{
+        background: transparent;
+        height: 8rem;
+        margin: 10px 0;
+
+        h5{
+            background: transparent;
+            margin: 4px 0;
+            text-align: center;
+        }
+
+        p{
+            margin: 4px 0;
+        }
+    }
+
+
+    p{
+        background: transparent;
+    }
+
+    .delete-button{
+        background: transparent;
+        border: 1px solid tomato;
+        border-radius: 8px;
+        height: 1.5rem;
+        padding: 0.3rem 0.2rem;
+        width: 100%;
+    }
+    
+    .delete-button:hover{
+        background: tomato;
+        box-shadow: 1px 1px 1px grey;
+        color: white;
+        cursor: pointer;
+        height: 1.6rem;
+    }
+}

@@ -1,79 +1,36 @@
-.buy-btn{
-    padding: 10px;
-    background: var(--clr-primary);
-    border:1px solid var(--clr-primary);
-    border-radius: 8px;
-    color: var(--clr-secondary);
-    cursor: pointer;
-    margin: 1rem auto;
-    width: 70%;
-}
-
-.buy-btn:hover{
-    border:1px solid var(--clr-primary);
-    background: var(--clr-secondary);
-    border-radius: 8px;
-    color: 1px solid var(--clr-secondary);
-    cursor: pointer;
-    padding: 10px;
-    width: 70%;
-    margin: 1rem auto;
-}
-
-.cart-item{
-    display: grid;
-    gap:1rem;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));//18% 1fr;
-    margin: 0.6rem;
-    list-style-type: none;
-
-    img{
-        height: 100%;
-    }
-}
-
-.cart-title{
-    margin: 30px 0;
-}
-
-.cart-grid{
-    display: grid;
-    // grid-template-columns: 70% 1fr;
-    gap:1rem;
-    grid-auto-rows: 22rem;
-    grid-template-columns: repeat(50%);
-}
-
-.buy-btn-container{
+h1{
+    margin-bottom: 1rem;
     text-align: center;
+}
+
+.cart-item-container{
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    text-decoration: none;
 }
 
 .cart-details{
+    margin-top: 1rem;
     text-align: center;
-    margin-top: 30px;
 
-    p{
-        display: inline-block;
-        margin-right: 20px;
+    .buy-btn{
+        background: var(--clr-primary);
+        border-radius: 8px;
+        color: var(--clr-secondary);
+        margin: 10px 0;
+        padding: 8px;
+        width: 50%;
     }
 
-    strong{
-        display: inline-block;
+    .buy-btn:hover{
+        background: var(--clr-primary);
+        border-radius: 8px;
+        color: var(--clr-secondary);
+        cursor: pointer;
+        padding: 8px;
+        margin: 10px 0;
+        width: 50%;
     }
-}
-
-.del-button{
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: white;
-    color: red;
-}
-
-.quantity-button{
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: white;
-    color: var(--clr-primary);
 }

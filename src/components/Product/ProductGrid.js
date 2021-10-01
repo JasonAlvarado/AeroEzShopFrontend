@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductItem from './ProductItem';
-import "../styles/product-grid.scss"
+import "../../styles/product-grid.scss"
 
 const ProductGrid = ({ category = "Almacén" }) => {
     const [page, setPage] = useState(0);

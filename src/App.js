@@ -4,9 +4,9 @@ import {
     Route
 } from "react-router-dom";
 
-import Cart from "./components/Cart";
-import Header from "./components/Header";
-import ProductGrid from "./components/ProductGrid";
+import Cart from "./components/Cart/Cart";
+import Header from "./components/Core/Header";
+import ProductGrid from "./components/Product/ProductGrid";
 import "alertifyjs/build/css/alertify.css";
 
 const App = () => {
